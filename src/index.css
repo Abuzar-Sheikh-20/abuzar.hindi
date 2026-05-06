@@ -18,3 +18,12 @@
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
+
+.menu-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.menu-scrollbar::-webkit-scrollbar {
+  display: none;
+}

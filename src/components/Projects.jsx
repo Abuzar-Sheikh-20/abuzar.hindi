@@ -1,50 +1,63 @@
-import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-import snapixlab from '../assets/snapixlab.png'
-import charitify from '../assets/charitify.png'
-import ecommerce from '../assets/ecommerce.png'
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+// import snapixlab from "../assets/snapixlab.png";
+import goguide from "../assets/goguide.webp";
+import charitify from "../assets/charitify.png";
+import ecommerce from "../assets/ecommerce.png";
 
 const Projects = () => {
-  const [visible, setVisible] = useState(false)
+  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     // simple reveal on mount
-    const t = setTimeout(() => setVisible(true), 80)
-    return () => clearTimeout(t)
-  }, [])
+    const t = setTimeout(() => setVisible(true), 80);
+    return () => clearTimeout(t);
+  }, []);
 
   const projects = [
+    // {
+    //   id: 1,
+    //   title: 'SnapixLab',
+    //   description:
+    //     'Refreshed a website layout to improve clarity and make it easy for visitors to find information on any device.',
+    //   image: snapixlab,
+    //   type: 'Featured Project',
+    //   link: 'https://www.snapixlab.com/'
+    // },
     {
-      id: 1,
-      title: 'SnapixLab',
+      id: "goguide",
+      title: "GoGuide",
       description:
-        'Refreshed a website layout to improve clarity and make it easy for visitors to find information on any device.',
-      image: snapixlab,
-      type: 'Featured Project',
-      link: 'https://www.snapixlab.com/'
+        "Developed an interactive travel-guide base on User Roles with real-time updates, live tracking, and ADMIN panel.",
+      image: goguide,
+      type: "MERN Stack · Travel Guide",
+      link: "https://www.goguide.in/",
     },
     {
-      id: 2,
-      title: 'Charitify',
+      id: "charitify",
+      title: "Charitify",
       description:
-        'Built a simple portal to manage content and customer messages with clear, easy-to-use screens.',
+        "Built a simple portal to manage content and customer messages with clear, easy-to-use screens.",
       image: charitify,
-      type: 'Frontend · UI Focus',
-      link: 'https://charitify-three.vercel.app/'
+      type: "Frontend · UI Focus",
+      link: "https://charitify-three.vercel.app/",
     },
     {
-      id: 3,
-      title: 'Forever',
+      id: "forever",
+      title: "Forever",
       description:
-        'Created a focused product page that highlights features and helps visitors understand the value quickly.',
+        "Created a focused product page that highlights features and helps visitors understand the value quickly.",
       image: ecommerce,
-      type: 'Full Stack · E-commerce',
-      link: 'https://ecom-ten-henna.vercel.app/'
+      type: "Full Stack · E-commerce",
+      link: "https://ecom-ten-henna.vercel.app/",
     },
-  ]
+  ];
 
   return (
-    <section id="projects" className="bg-[#F3EFE7] w-full px-6 sm:px-8 lg:px-12 py-12 md:py-20">
+    <section
+      id="projects"
+      className="bg-[#F3EFE7] w-full px-6 sm:px-8 lg:px-12 py-12 md:py-20"
+    >
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-8">
           <span className="text-4xl md:text-5xl lg:text-8xl  font-bold text-red-500 tracking-tight">
@@ -64,7 +77,7 @@ const Projects = () => {
               className={`group bg-[#F7F3EB] border border-[2px] border-[#E6E1D8] rounded-xl p-6 sm:p-8 shadow-sm hover:bg-green-100 transform transition-all duration-300 ease-out hover:shadow-lg hover:-translate-y-1 ${i === 2 ? "md:col-span-2 lg:col-span-1" : ""}`}
               style={{
                 opacity: visible ? 1 : 0,
-                transform: visible ? 'translateY(0)' : 'translateY(12px)',
+                transform: visible ? "translateY(0)" : "translateY(12px)",
                 transitionDelay: `${i * 80}ms`,
               }}
             >
@@ -80,20 +93,33 @@ const Projects = () => {
                 )}
               </div>
 
-              <h3 className="text-xl font-bold text-blue-900 mb-2">{p.title}</h3>
-              <p className="text-sm text-black leading-relaxed">{p.description}</p>
-              <div className='flex justify-between items-center'>
-                <div className='text-sm text-gray-500 rounded-full mt-1'>{p.type}</div>
+              <h3 className="text-xl font-bold text-blue-900 mb-2">
+                {p.title}
+              </h3>
+              <p className="text-sm text-black leading-relaxed">
+                {p.description}
+              </p>
+              <div className="flex justify-between items-center">
+                <div className="text-sm text-gray-500 rounded-full mt-1">
+                  {p.type}
+                </div>
                 <Link to={p.link} target="_blank" rel="noopener noreferrer">
-                  <button className='text-sm bg-blue-900 text-white px-3 py-1 rounded-full hover:translate-x-1 transition-all duration-300 mt-1'>Live Demo</button>
+                  <button className="text-sm bg-blue-900 text-white px-3 py-1 rounded-full hover:translate-x-1 transition-all duration-300 mt-1">
+                    Live Demo
+                  </button>
                 </Link>
               </div>
+              <Link to={`/projects/${p.id}`} rel="noopener noreferrer">
+                <button className="text-sm bg-red-500 text-white w-full px-3 py-1 mt-2 rounded-full hover:scale-110 hover:bg-green-700 transition-all duration-300 mt-1">
+                  Case Study
+                </button>
+              </Link>
             </article>
           ))}
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;

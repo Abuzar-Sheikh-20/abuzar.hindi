@@ -36,25 +36,41 @@ const AboutText = () => {
   const y = useTransform(scrollYProgress, [0, 0.3], [40, 0]);
 
   return (
-
     <section id="about" className="scroll-mt-48">
-      <motion.div
-        ref={ref}
-        style={{ opacity, y }}
-        className="space-y-6"
-      >
+      <motion.div ref={ref} style={{ opacity, y }} className="space-y-6">
         <h2 className="text-4xl md:text-8xl font-bold text-red-500 tracking-tight">
           About
         </h2>
         <div className="space-y-4 text-lg leading-relaxed text-black">
-          <p>
-            I’m <b>Abuzar Hindi</b> , a <b className="text-blue-700">Full MERN Stack Stack Web Developer</b>. I work on building reliable, scalable web applications with a strong focus on both frontend experience and backend logic. On the frontend, I care deeply about structure, responsiveness, and usability, and on the backend, I focus on clean APIs, data flow, and maintainable logic.</p>
+          <p className="text-lg text-gray-800 leading-relaxed mt-4">
+            I’m <span className="font-semibold">Abuzar Hindi</span>, a
+            <span className="text-blue-600 font-semibold">
+              {" "}
+              MERN Stack Developer
+            </span>
+            . I specialize in building scalable systems, APIs, and admin panels
+            for real-world applications. I am currently developing a{" "}
+            <span className="font-semibold">
+              Tourist Booking Platform (Uber-like system){" "}
+            </span>
+            with features like driver & guide management, role-based
+            authentication, booking flow APIs, and document verification
+            systems. My focus is on backend architecture, clean API design, data
+            flow, and building systems that are reliable, scalable, and
+            production-ready.
+          </p>
           <p className="text-gray-500">
-            <li>I build reusable, scalable components on both frontend and backend</li>
-            <li>I use animations only where they improve clarity or user experience</li>
-            <li>I focus on clean code, clear structure, and long-term maintainability</li>
-
-
+            <li>
+              I build reusable, scalable components on both frontend and backend
+            </li>
+            <li>
+              I use animations only where they improve clarity or user
+              experience
+            </li>
+            <li>
+              I focus on clean code, clear structure, and long-term
+              maintainability
+            </li>
           </p>
         </div>
       </motion.div>
@@ -70,17 +86,17 @@ const blockData = [
   },
   {
     title: "Experience",
-    description: `Freelance & Personal projects | Real client work`,
+    description: `Real client work | Payment & Notification integration | Admin panels | Backend APIs`,
     details: "2+ years of development",
   },
   {
     title: "Focus Areas",
-    description: "Responsive UI, Performance, UX clarity",
+    description: "Responsive UI, Performance, UX clarity | Scalability & best approaches",
     details: "Modern web designs",
   },
   {
     title: "I Work On",
-    description: "Responsive web designs, Backend APIs & logic, Authentication",
+    description: "Backend APIs & logic, Authentication, ADMIN panels and frontend components",
     details: "& Continuing.....",
   },
 ];
@@ -140,8 +156,12 @@ const AnimatedBlock = ({ delay, duration, title, description, details }) => {
     >
       <div className="absolute inset-0 p-4 bg-gray-700 text-white flex flex-col justify-between">
         <div>
-          <h3 className="text-yellow-300 text-xl md:text-2xl font-bold mb-2">{title}</h3>
-          <p className="text-white text-sm md:text-base font-semibold mb-1">{description}</p>
+          <h3 className="text-yellow-300 text-xl md:text-2xl font-bold mb-2">
+            {title}
+          </h3>
+          <p className="text-white text-sm md:text-base font-semibold mb-1">
+            {description}
+          </p>
         </div>
         <p className="text-yellow-500 text-xs md:text-sm">{details}</p>
       </div>

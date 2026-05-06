@@ -1,25 +1,27 @@
-
 const Services = () => {
   const services = [
     {
-      id: 1,
-      title: 'Frontend Development',
-      description: 'I build clean and responsive user interfaces that people actually enjoy using. This includes layouts, forms, buttons, and making sure everything works smoothly across phones, tablets, and desktops.',
+      id: "1",
+      title: "Frontend Development",
+      description: "Building clean, responsive, and user-friendly interfaces using React and modern UI practices.",
     },
     {
-      id: 2,
-      title: 'Backend Development',
-      description: 'I develop backend systems that handle data, security, and application logic. The focus is on clean APIs, stable performance, and systems that can grow without slowing down.',
+      id: "2",
+      title: "Backend Development",
+      description: "Developing scalable APIs, authentication systems, and backend logic with performance in mind.",
     },
     {
-      id: 3,
-      title: 'Full-Stack Web Solutions',
-      description: 'I build complete web applications from frontend to backend. This means everything works together properly — from the user interface to the server, database, and authentication.',
+      id: "3",
+      title: "Full-Stack Solutions",
+      description: "Creating complete web applications with seamless integration between frontend, backend, and database.",
     },
-  ]
+  ];
 
   return (
-    <section id="services" className="bg-gray-700 relative w-full px-12 lg:px-12 py-24 md:py-32">
+    <section
+      id="services"
+      className="bg-gray-700 relative w-full px-12 lg:px-12 py-24 md:py-32"
+    >
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="mb-12 text-center">
@@ -58,7 +60,7 @@ const Services = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Services
+export default Services;

@@ -95,7 +95,7 @@ const Contacts = () => {
 
                     <div className="flex items-center gap-3">
                       <SiGithub className="text-gray-800 w-5 h-5" />
-                      <a href="https://github.com/Abuzar-Sheikh-20" target="_blank" rel="noopener noreferrer" className="hover:underline">Github</a>
+                      <a href="https://github.com/abuzar-hindi" target="_blank" rel="noopener noreferrer" className="hover:underline">Github</a>
                     </div>
                   </div>
                 </div>
